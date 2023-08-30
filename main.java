@@ -2,6 +2,7 @@
 import Banco.Cuenta_bancaria;
 import Banco.Cheque;
 import Banco.Cuenta_corriente;
+import EjerciciosRepaso.Operacion;
 import EmpresaVehiculos.Vehiculos.Auto;
 import EmpresaVehiculos.Vehiculos.Camion;
 import EmpresaVehiculos.Vehiculos.EmpresaVehiculo;
@@ -26,6 +27,7 @@ import java.util.Timer;
 public class main {
     public static void main(String[] args) {
 
-
+        System.out.println("La suma de 2+4 es: ");
+        System.out.println(Operacion.sumar(2,4));
 
     }}

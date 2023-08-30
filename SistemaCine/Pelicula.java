@@ -9,6 +9,8 @@ public class Pelicula {
     private Genero genero;
     private int identificador;
 
+    private static int contador=0;
+
     public String getTitulo() {
         return titulo;
     }
@@ -41,10 +43,22 @@ public class Pelicula {
         this.identificador = identificador;
     }
 
-    public Pelicula(String titulo, int duracion, Genero genero, int identificador) {
+    public static int getContador() {
+        return contador;
+    }
+
+    public static void setContador(int contador) {
+        Pelicula.contador = contador;
+    }
+
+    public Pelicula(){
+
+    }
+    public Pelicula(String titulo, int duracion, Genero genero) {
         this.titulo = titulo;
         this.duracion = duracion;
         this.genero = genero;
-        this.identificador = identificador;
+        this.identificador = contador;
+        Pelicula.setContador(getContador()+1);
     }
 }

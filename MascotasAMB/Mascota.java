@@ -22,7 +22,7 @@ public  abstract  class Mascota {
     }
 
     public Persona getDueño() {
-        return dueño;
+        return dueño; // hola
     }
 
     public void setDueño(Persona dueño) {

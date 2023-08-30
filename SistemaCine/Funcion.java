@@ -45,6 +45,9 @@ public class Funcion  {
         this.cantEspectadores = cantEspectadores;
     }
 
+    public Funcion(){
+        this.cantEspectadores = 0;
+    }
     public Funcion(Pelicula pelicula, LocalDate fechaHora, SalaCine sala, int cantEspectadores) {
         this.pelicula = pelicula;
         this.fechaHora = fechaHora;

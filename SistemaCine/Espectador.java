@@ -14,6 +14,10 @@ public class Espectador extends Persona {
     private HashSet<Funcion> historialFunciones;
 
 
+    public Espectador(){
+
+
+    }
     public Espectador(String nombre, String apellido, int dni, Fecha nacimienton, int identificador, String emailRegistrado, HashSet<Funcion> historialFunciones) {
         super(nombre, apellido, dni, nacimienton);
         this.identificador = identificador;
