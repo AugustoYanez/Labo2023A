@@ -5,11 +5,21 @@ import Fecha.Fecha;
 
 import java.util.ArrayList;
 
-public class Sensor_complejo extends Alarma {
+public class Sensor_complejo  {
+
+    private int valorLimite;
+
+    public int getValorLimite() {
+        return valorLimite;
+    }
+
+    public void setValorLimite(int valorLimite) {
+        this.valorLimite = valorLimite;
+    }
+
     ArrayList<Alarma> alarmas;
 
-    public Sensor_complejo(boolean estado, int medida, int valorLimite, Fecha adquisicion) {
-        super(estado,medida,valorLimite,adquisicion);
+    public Sensor_complejo() {
         this.alarmas = new ArrayList<Alarma>();
     }
 
@@ -22,7 +32,7 @@ public class Sensor_complejo extends Alarma {
         int cantidad = 0;
         for (Alarma x : alarmas) {
             if (x.isEstado()) {
-                x.verificar_medida();
+                x.verificarMedida();
                 valorMedio = valorMedio + x.getMedida();
                 cantidad++;
             }
@@ -30,5 +40,14 @@ public class Sensor_complejo extends Alarma {
         if (cantidad > 0 && valorMedio / cantidad > getValorLimite()) {
             System.out.println("¡Alarma de sensor compuesto activada!");
         }
+    }
+
+    public void verMasInfo(int numeroSensor){
+Alarma sensor = null;
+try {
+    sensor = alarmas.get(numeroSensor);
+}catch (ArrayIndexOutOfBoundsException e){
+    System.out.println(e);
+}
     }
 }

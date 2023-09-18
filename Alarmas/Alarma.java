@@ -5,6 +5,7 @@ import Fecha.Fecha;
 public abstract class Alarma {
 
     boolean estado;
+
     int medida;
     int valorLimite;
 
@@ -56,7 +57,6 @@ public abstract class Alarma {
     }
 
 
-    protected void verificar_medida() {
+   public abstract void verificarMedida();
 
-    }
 }

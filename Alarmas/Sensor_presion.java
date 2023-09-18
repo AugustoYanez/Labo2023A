@@ -7,9 +7,11 @@ public class Sensor_presion extends Alarma {
         super(estado,medida,valorLimite,adquisicion);
     }
 
-    public void consultarMedida() {
-        if (getMedida() > getValorLimite()) {
-            System.out.println("Sensor de presión activado");
+    public void verificarMedida(){
+
+        if ( this.getMedida() > this.getValorLimite()){
+            System.out.println("SENSOR DE PRESION ACTIVADO. ");
         }
+
     }
 }

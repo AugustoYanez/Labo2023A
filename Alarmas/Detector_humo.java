@@ -7,9 +7,11 @@ public class Detector_humo extends Alarma {
      super(estado,medida,valorLimite,adquisicion);
     }
 
-    public void consultarMedida() {
-        if (getMedida() > getValorLimite()) {
-            System.out.println("Llamando a los bomberos...");
+public void verificarMedida(){
+
+        if ( this.getMedida() > this.getValorLimite()){
+            System.out.println("LLAMEN A LOS BOMBEROS. ");
         }
-    }
+
+}
 }

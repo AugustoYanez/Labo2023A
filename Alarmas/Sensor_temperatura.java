@@ -7,10 +7,12 @@ public class Sensor_temperatura extends Alarma {
         super(estado,medida,valorLimite,adquisicion);
     }
 
-    public void consultarMedida() {
-        if (getMedida() > getValorLimite()) {
-            System.out.println("¡Cuidado! La temperatura sube");
+    public void verificarMedida(){
+
+        if ( this.getMedida() > this.getValorLimite()){
+            System.out.println(" CUIDADO, LA TEMPERATURA SUBE. ");
         }
+
     }
 
 }

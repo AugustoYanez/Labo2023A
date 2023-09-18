@@ -1,0 +1,7 @@
+package SistemaLibros;
+
+public enum GeneroLibro {
+
+    FICCION,NOFICCION,AVENTURA,CIENCIAFICCION,SAGA,TRILOGIA,FANTASIA,TERROR,COMEDIA
+
+}
